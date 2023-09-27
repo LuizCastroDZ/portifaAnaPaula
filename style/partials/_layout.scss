@@ -1,0 +1,535 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+// config bg-home
+
+.bg-home {
+    position: relative;
+}
+
+.bg-home::before {
+    content: '';
+    display: block;
+    position: absolute;
+    /*img caso queira*/
+    /*background-image: linear-gradient(to bottom, cor1, cor2), url();*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: 0.9;
+}
+
+// Config Hero
+
+.hero {
+    color: $anapaula-color-branco;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 100px 0 100px;
+
+    h1 {
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 46px;
+    }
+
+    p {
+        margin: 14px 0;
+    }
+}
+
+// reponsividade mobile
+
+@media screen and (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
+
+        h1 {
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+// config about
+
+.about {
+    background-color: $anapaula-color-branco;
+    overflow: hidden;
+    color: $anapaula-color-preto;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+
+    img {
+        max-width: 500px;
+    }
+}
+
+.about-content div {
+    flex: 1;
+}
+
+.about-description {
+    h2 {
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-bottom: 14px;
+        margin: 0 50px 0 0;
+        line-height: 150%;
+        color: $anapaula-color-preto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+}
+
+// config design
+
+.design {
+    background-color: $anapaula-color-azul;
+    overflow: hidden;
+    color: $anapaula-color-branco;
+}
+
+.design-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 160px 64px 160px;
+
+    img {
+        max-width: 500px;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 14px;
+    }
+    p {
+        text-align: center;
+        margin-bottom: 14px;
+    }
+}
+
+.design-content div {
+    flex: 1;
+}
+
+.design-description {
+    h2 {
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-bottom: 14px;
+        margin: 0 0 0 0;
+        line-height: 150%;
+        color: $anapaula-color-branco;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .design-content {
+        flex-direction: column;
+    }
+}
+
+.img-design {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+}
+
+.img-design-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        max-width: 625px;
+        transition: transform 0.2s;
+    }
+}
+
+.img-design-content img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.img-design-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 14px;
+    background-color: $anapaula-color-branco;
+    box-shadow: 15px 15px 15px 15px #ffffff;
+    z-index: 99;
+
+    strong {
+        color: $anapaula-color-preto;
+    }
+
+    p {
+        color: $anapaula-color-preto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img-design {
+        flex-direction: column;
+    }
+}
+
+// config Ilustration
+
+.ilustration {
+    background-color: $anapaula-color-rosa;
+    overflow: hidden;
+    color: $anapaula-color-branco;
+
+}
+
+.ilustration-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+
+    img {
+        max-width: 500px;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 14px;
+    }
+    p {
+        text-align: center;
+        margin-bottom: 14px;
+    }
+}
+
+.ilustration-content div {
+    flex: 1;
+}
+
+.ilustration-description {
+    h2 {
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-bottom: 14px;
+        margin: 0 250px 0 250px;
+        line-height: 150%;
+        color: $anapaula-color-branco;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ilustration-content {
+        flex-direction: column;
+    }
+}
+
+.img-ilustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+}
+
+.img-ilustration-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        max-width: 880px;
+        transition: transform 0.2s;
+    }
+}
+
+.img-ilustration-content img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.img-ilustration-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 14px;
+    background-color: $anapaula-color-branco;
+    box-shadow: 15px 15px 15px 15px #ffffff;
+    z-index: 99;
+
+    strong {
+        color: $anapaula-color-preto;
+    }
+
+    p {
+        color: $anapaula-color-preto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img-ilustration {
+        flex-direction: column;
+    }
+}
+
+// config Ilustration
+
+.tatuagem {
+    background-color: $anapaula-color-preto;
+    overflow: hidden;
+    color: $anapaula-color-branco;
+
+}
+
+.tatuagem-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+
+    img {
+        max-width: 500px;
+    }
+
+    h2{
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 14px;
+    }
+    p {
+        text-align: center;
+        margin-bottom: 14px;
+    }
+}
+
+.tatuagem-content div {
+    flex: 1;
+}
+
+.tatuagem-description {
+    h2 {
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-bottom: 14px;
+        margin: 0 250px 0 250px;
+        line-height: 150%;
+        color: $anapaula-color-branco;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tatuagem-content {
+        flex-direction: column;
+    }
+}
+
+.img-tatuagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+}
+
+.img-tatuagem-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        max-width: 590px;
+        max-height: 550px;
+        transition: transform 0.2s;
+    }
+}
+
+.img-tatuagem-content img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.img-tatuagem-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 14px;
+    background-color: $anapaula-color-branco;
+    box-shadow: 15px 15px 15px 15px #ffffff;
+    z-index: 99;
+
+    strong {
+        color: $anapaula-color-preto;
+    }
+
+    p {
+        color: $anapaula-color-preto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img-tatuagem {
+        flex-direction: column;
+    }
+}
+
+// config service
+
+.services {
+    background-color: $anapaula-color-azul;
+    color: $anapaula-color-branco;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+
+    p {
+        color: $anapaula-color-branco;
+    }
+}
+
+.service-content h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.service-content p {
+    line-height: 150%;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 780px;
+}
+
+.img-service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0 44px 34px 44px;
+}
+
+.img-service-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        max-width: 625px;
+        transition: transform 0.2s;
+    }
+}
+
+.img-service-content img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+.img-service-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 14px;
+    background-color: $anapaula-color-branco;
+    box-shadow: 15px 15px 15px 15px #ffffff;
+    z-index: 99;
+
+    strong {
+        color: $anapaula-color-preto;
+    }
+
+    p {
+        color: $anapaula-color-preto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img-service {
+        flex-direction: column;
+    }
+}
+
+// config footer
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    gap: 24px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 8px;
+}
